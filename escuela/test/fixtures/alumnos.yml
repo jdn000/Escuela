@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+#one:
+ # rut: MyString
+ # nombre: MyString
+ # ap_pat: MyString
+ # ap_mat: MyString
+
+#two:
+  #rut: MyString2
+ # nombre: MyString
+#  ap_pat: MyString
+#  ap_mat: MyString

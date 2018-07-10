@@ -1,0 +1,18 @@
+<%= form_for(@alumno) do |f| %>
+
+  <%= f.label :Nombres%>
+  <%= f.text_field :nombre, class: 'form-control' %>
+
+  <%= f.label :Apellido_paterno %>
+  <%= f.text_field :ap_pat, class: 'form-control' %>
+
+  <%= f.label :Apellido_materno %>
+  <%= f.text_field :ap_mat, class: 'form-control' %>
+
+  <%= f.label :Rut_sin_puntos %>
+  <%= f.text_field :rut, class: 'form-control' %>
+
+  <%= f.label :"Curso (sólo numero)" %>
+  <%= f.text_field :curso, class: 'form-control' %>  
+  <%= f.submit "Inscribir", class: "btn btn-primary" %>
+<% end %>
