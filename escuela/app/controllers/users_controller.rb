@@ -10,6 +10,8 @@ class UsersController < ApplicationController
 
   def index
     @users = User.where(activated: true).paginate(page: params[:page])
+    @user=User.find_by(params[:session])
+
   end
 
   def new
@@ -37,8 +39,7 @@ class UsersController < ApplicationController
     if @user.update_attributes(user_params)
       # Handle a successful update.
       flash[:success] = "Profile updated"
-      redirect_to @user
-      
+      redirect_to @user   
     else
       render 'edit'
     end

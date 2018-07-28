@@ -1,6 +1,4 @@
 class Alumno < ApplicationRecord
-  has_many :relationships
-  has_many :asignaturas ,:through => :relationships
   include RunCl::ActAsRun
   before_save :downcase_nombre,:downcase_ap_pat, :downcase_ap_mat, :downcase_rut 
   validates :nombre,  presence: true, length: { maximum: 50 }      
@@ -8,7 +6,8 @@ class Alumno < ApplicationRecord
   validates :ap_mat,  presence: true, length: { maximum: 50 } 
   validates :rut,  presence: true, length: { maximum: 10 },uniqueness: { case_sensitive: false }
   has_run_cl :rut,  run: false, uniq_run: false # skip both validations
-
+  has_many :nos
+  has_many :asignaturas, through: :nos
 
 
 private

@@ -1,0 +1,6 @@
+<%= form_for(@asignatura) do |f| %>
+
+  <%= f.label :Nombre_asignatura%>
+    <%= f.select(:nombre_asignatura, [ 'Lenguaje y comunicacion','Lenguaje y Literatura','Inglés','Matemática','Historia y Geografía y Ciencias Sociales','Ciencias Naturales','Artes Visuales','Música','Educación Física y Salud','Tecnología','Religión' ], {}, { :class => 'select' }) %>
+  <%= f.submit "Inscribir asignatura", class: "btn btn-primary" %>
+<% end %>

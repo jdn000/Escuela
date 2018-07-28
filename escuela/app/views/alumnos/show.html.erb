@@ -2,7 +2,8 @@
           <h1 class="display-1"></h1>
 </div>
 
-<h1>Alumnos</h1>
+
+<h1>Alumno:  </h1> 
 
 <table class="table table-bordered">
   <tr>
@@ -12,13 +13,16 @@
       <th>rut</th>
       <th> curso </th>  
   </tr>
-    <% @alumnos.each do |alumno| %>
+
       <tr>
-        <td><%= alumno.nombre %></td>
-        <td><%= alumno.ap_pat %></td>
-        <td><%= alumno.ap_mat %></td>
-        <td><%= alumno.rut %></td>
-        <td><%= alumno.curso %></td>
+        <td><%= @alumno.nombre %></td>
+        <td><%= @alumno.ap_pat %></td>
+        <td><%= @alumno.ap_mat %></td>
+        <td><%= @alumno.rut %></td>
+        <td><%= @alumno.curso %></td>
+        <td><%= link_to 'Editar', edit_alumno_path(@alumno) %> </td>
       </tr>
-    <% end %>
+
 </table>
+
+<%= link_to 'Volver', alumnos_path %>

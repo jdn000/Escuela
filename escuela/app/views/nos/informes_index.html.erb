@@ -1,0 +1,52 @@
+<h1>Informes</h1>
+ <table >
+  <tbody>
+  <tr> 
+  	<% @alumnos[0..4].each do |alumno| %>  
+   <td>  <div class="btn button azul"><%= link_to alumno.nombre+'-'+alumno.ap_pat , notas_descargar_path(:id=>alumno.id, format: :docx) %></div><% end %>
+  </td>   
+  </tr>
+  <tr> 
+    <% @alumnos[5..9].each do |alumno| %>  
+   <td>  <div class="btn button azul"><%= link_to alumno.nombre+'-'+alumno.ap_pat , notas_descargar_path(:id=>alumno.id, format: :docx) %></div><% end %>
+  </td>   
+  </tr>
+  <tr> 
+    <% @alumnos[10..14].each do |alumno| %>  
+   <td>  <div class="btn button azul"><%= link_to alumno.nombre+'-'+alumno.ap_pat , notas_descargar_path(:id=>alumno.id, format: :docx) %></div><% end %>
+  </td>   
+  </tr>
+
+  <tr> 
+    <% @alumnos[15..19].each do |alumno| %>  
+   <td>  <div class="btn button azul"><%= link_to alumno.nombre+'-'+alumno.ap_pat , notas_descargar_path(:id=>alumno.id, format: :docx) %></div><% end %>
+  </td>   
+  </tr>
+
+  <tr> 
+    <% @alumnos[20..24].each do |alumno| %>  
+   <td>  <div class="btn button azul"><%= link_to alumno.nombre+'-'+alumno.ap_pat , notas_descargar_path(:id=>alumno.id, format: :docx) %></div><% end %>
+  </td>   
+  </tr>
+
+  <tr> 
+    <% @alumnos[25..29].each do |alumno| %>  
+   <td>  <div class="btn button azul"><%= link_to alumno.nombre+'-'+alumno.ap_pat , notas_descargar_path(:id=>alumno.id, format: :docx) %></div><% end %>
+  </td>   
+  </tr>
+
+  <tr> 
+    <% @alumnos[30..34].each do |alumno| %>  
+   <td>  <div class="btn button azul"><%= link_to alumno.nombre+'-'+alumno.ap_pat , notas_descargar_path(:id=>alumno.id, format: :docx) %></div><% end %>
+  </td>   
+  </tr>
+
+  <tr> 
+    <% @alumnos[35..38].each do |alumno| %>  
+   <td>  <div class="btn button azul"><%= link_to alumno.nombre+'-'+alumno.ap_pat , notas_descargar_path(:id=>alumno.id, format: :docx) %></div><% end %>
+  </td>   
+  </tr>
+
+  </tbody>
+</table> 
+

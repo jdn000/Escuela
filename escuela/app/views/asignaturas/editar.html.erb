@@ -1,0 +1,10 @@
+        
+   <thead><% @asignaturas.each do |asignatura| %>
+      <div><%= asignatura.nombre_asignatura %>   
+  
+       <div class="btn-group "> <%= link_to 'Eliminar ', asignatura, method: :delete,  class: "btn button rojo " , data: { confirm: 'Está seguro?' } %>
+      <%= link_to 'Cambiar nombre', edit_asignatura_path(asignatura),class: "btn btn-primary"  %>       
+      </div></div>
+    <% end %>
+   </thead>
+   <div><%= link_to 'volver', asignaturas_url , class: "btn button naranjo "%></div>

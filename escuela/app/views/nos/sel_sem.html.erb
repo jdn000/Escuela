@@ -1,0 +1,6 @@
+<%= form_for(@sm) do |f| %>
+<div class="form-group">
+<label>Seleccione el semestre</label>
+<%= f.select :semestre, [["1",1], ["2",2]], class: "form-control", required: true  %>
+</div>
+<% end %>

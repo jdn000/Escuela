@@ -2,4 +2,8 @@
 
 <h1>Bienvenido <%= @user.name  %></h1>
 
-<%= link_to 'nuevo alumno', new_alumno_path , class: "btn btn-primary"%> <%= link_to 'todos los alumnos', alumnos_todos_path, class: "btn btn-primary" %>
+
+<%= link_to 'Nuevo alumno', new_alumno_path , class: "btn btn-primary"%> 
+<%= link_to 'Todos los alumnos', alumnos_todos_path, class: "btn btn-primary" %>
+ <%= link_to 'Volver', users_url, class: "btn btn-primary" %>
+

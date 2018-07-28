@@ -19,6 +19,10 @@
         <td><%= alumno.ap_mat %></td>
         <td><%= alumno.rut %></td>
         <td><%= alumno.curso %></td>
+        <td><%= link_to 'Ver', alumno_path(alumno) %> </td>
+        <td><%= link_to 'Eliminar', alumno, method: :delete,
+                                     data: { confirm: 'Está seguro?' } %> </td>        
       </tr>
     <% end %>
+    
 </table>

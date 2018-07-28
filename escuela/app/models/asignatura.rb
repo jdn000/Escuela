@@ -1,5 +1,11 @@
 class Asignatura < ApplicationRecord
-	  has_many :relationships
-	  has_many :alumnos ,:through => :relationships
+ validates :nombre_asignatura,  presence: true, length: { maximum: 50 },uniqueness: true
+ before_save :upcase_name
+  has_many :nos
+  has_many :alumnos, through: :nos
 
+ private
+     def upcase_name
+      self.nombre_asignatura = nombre_asignatura.capitalize
+    end
 end

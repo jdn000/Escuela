@@ -1,0 +1,244 @@
+
+<p><img src="C:\Users\Jd\Desktop\image002.png" style="width:71px;height:86px" /><img src="C:\Users\Jd\Desktop\image001.png" style="width:323px;height:86px" /></p>
+<p style="padding-left: 120px; text-align: center;"><strong>INFORME DE NOTAS SEMESTRALES</strong></p>
+<p style="padding-left: 120px; text-align: center;"><strong>1&deg; Semestre 2018</strong></p>
+<p style="padding-left: 120px; text-align: center;">Planes y Programas Decreto N&deg; 628 /2016</p>
+<p style="padding-left: 120px; text-align: center;">Reglamento de Evaluaci&oacute;n y Promoci&oacute;n Escolar Decreto Exento N&deg; 511 del a&ntilde;o 1997</p>
+<p style="padding-left: 120px; text-align: center;">Decreto N&deg; 824 del a&ntilde;o 1986 Rol Base de Datos N&deg;9718-7</p>
+<p>&nbsp;</p>
+<table border="1" >
+<tbody>
+<tr>
+<td colspan="9" >
+<p><strong>Alumno(a)</strong>  <%=@alumno.nombre.capitalize%>  <%=@alumno.ap_pat.capitalize%>  <%=@alumno.ap_mat.capitalize%></p>
+</td>
+<td colspan="3" >
+<p><strong>Rut:</strong>  <%=@alumno.RUN%> </p>
+</td>
+</tr>
+<tr>
+<td colspan="6" >
+<p><strong>Curso: 6° año básico</strong></p>
+</td>
+<td colspan="6" >
+<p><strong>Fecha:</strong></p>
+</td>
+</tr>
+<tr>
+<td colspan="12" >
+<p><strong>Horario de Atención de apoderados:</strong> Viernes 10:30-11:00 am</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Asignaturas</strong></p>
+</td>
+<td colspan="10">
+<p><strong><center>Notas Parciales</center></strong></p>
+</td>
+<td >
+<p><strong>Promedio</strong></p>
+</td>
+</tr>
+<tr>
+<td >
+<p>Lenguaje y Comunicación</p> 
+</td>
+<td width="38">&nbsp;<%=@lenguaje.first.N1%></td>
+<td width="38">&nbsp;<%=@lenguaje.first.N2%></td>
+<td width="38">&nbsp;<%=@lenguaje.first.N3%></td>
+<td width="38">&nbsp;<%=@lenguaje.first.N4%></td>
+<td width="38">&nbsp;<%=@lenguaje.first.N5%></td>
+<td width="38">&nbsp;<%=@lenguaje.first.N6%></td>
+<td width="38">&nbsp;<%=@lenguaje.first.N7%></td>
+<td width="38">&nbsp;<%=@lenguaje.first.N8%></td>
+<td width="38">&nbsp;<%=@lenguaje.first.N9%></td>
+<td width="38">&nbsp;<%=@lenguaje.first.N10%></td>
+<td width="83">&nbsp;<strong><%=@lenguaje.first.N16%></strong></td>
+</tr>
+<tr>
+<td>
+<p>Inglés</p>
+</td>
+<td width="38">&nbsp;<%=@ingles.first.N1%></td>
+<td width="38">&nbsp;<%=@ingles.first.N2%></td>
+<td width="38">&nbsp;<%=@ingles.first.N3%></td>
+<td width="38">&nbsp;<%=@ingles.first.N4%></td>
+<td width="38">&nbsp;<%=@ingles.first.N5%></td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="83">&nbsp;<strong><%=@ingles.first.N16%></strong></td>
+</tr>
+<tr>
+<td>
+<p>Matemática</p>
+</td>
+<td width="38">&nbsp;<%=@matematica.first.N1%></td>
+<td width="38">&nbsp;<%=@matematica.first.N2%></td>
+<td width="38">&nbsp;<%=@matematica.first.N3%></td>
+<td width="38">&nbsp;<%=@matematica.first.N4%></td>
+<td width="38">&nbsp;<%=@matematica.first.N5%></td>
+<td width="38">&nbsp;<%=@matematica.first.N6%></td>
+<td width="38">&nbsp;<%=@matematica.first.N7%></td>
+<td width="38">&nbsp;<%=@matematica.first.N8%></td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="83">&nbsp;<strong><%=@matematica.first.N16%></strong></td>
+</tr>
+<tr>
+<td>
+<p>Historia y Geografía y Ciencias Sociales</p>
+</td>
+<td width="38">&nbsp;<%=@historia.first.N1%></td>
+<td width="38">&nbsp;<%=@historia.first.N2%></td>
+<td width="38">&nbsp;<%=@historia.first.N3%></td>
+<td width="38">&nbsp;<%=@historia.first.N4%></td>
+<td width="38">&nbsp;<%=@historia.first.N5%></td>
+<td width="38">&nbsp;<%=@historia.first.N6%></td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="83">&nbsp;<strong><%=@historia.first.N16%></strong></td>
+</tr>
+<tr>
+<td>
+<p>Ciencias Naturales</p>
+</td>
+<td width="38">&nbsp;<%=@ciencias.first.N1%></td>
+<td width="38">&nbsp;<%=@ciencias.first.N2%></td>
+<td width="38">&nbsp;<%=@ciencias.first.N3%></td>
+<td width="38">&nbsp;<%=@ciencias.first.N4%></td>
+<td width="38">&nbsp;<%=@ciencias.first.N5%></td>
+<td width="38">&nbsp;<%=@ciencias.first.N6%></td>
+<td width="38">&nbsp;<%=@ciencias.first.N7%></td>
+<td width="38">&nbsp;<%=@ciencias.first.N8%></td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="83">&nbsp;<strong><%=@ciencias.first.N16%></strong></td>
+</tr>
+<tr>
+<td>
+<p>Artes Visuales</p>
+</td>
+<td width="38">&nbsp;<%=@artes.first.N1%></td>
+<td width="38">&nbsp;<%=@artes.first.N2%></td>
+<td width="38">&nbsp;<%=@artes.first.N3%></td>
+<td width="38">&nbsp;<%=@artes.first.N4%></td>
+<td width="38">&nbsp;<%=@artes.first.N5%></td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="83">&nbsp;<strong><%=@artes.first.N16%></strong></td>
+</tr>
+<tr>
+<td>
+<p>Música</p>
+</td>
+<td width="38">&nbsp;<%=@musica.first.N1%></td>
+<td width="38">&nbsp;<%=@musica.first.N2%></td>
+<td width="38">&nbsp;<%=@musica.first.N3%></td>
+<td width="38">&nbsp;<%=@musica.first.N4%></td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="83">&nbsp;<strong><%=@musica.first.N16%></strong></td>
+</tr>
+<tr>
+<td>
+<p>Educación Física y Salud</p>
+</td>
+<td width="38">&nbsp;<%=@edfisica.first.N1%></td>
+<td width="38">&nbsp;<%=@edfisica.first.N2%></td>
+<td width="38">&nbsp;<%=@edfisica.first.N3%></td>
+<td width="38">&nbsp;<%=@edfisica.first.N4%></td>
+<td width="38">&nbsp;<%=@edfisica.first.N5%></td>
+<td width="38">&nbsp;<%=@edfisica.first.N6%></td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="83">&nbsp;<strong><%=@edfisica.first.N16%></strong></td>
+</tr>
+<tr>
+<td >
+<p>Tecnología</p>
+</td>
+<td width="38">&nbsp;<%=@tecnologia.first.N1%></td>
+<td width="38">&nbsp;<%=@tecnologia.first.N2%></td>
+<td width="38">&nbsp;<%=@tecnologia.first.N3%></td>
+<td width="38">&nbsp;<%=@tecnologia.first.N4%></td>
+<td width="38">&nbsp;<%=@tecnologia.first.N5%></td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="83">&nbsp;<strong><%=@tecnologia.first.N16%></strong></td>
+</tr>
+<tr>
+<td>
+<p>Religión</p>
+</td>
+<td width="38">&nbsp;<%=@religion.first.X1%></td>
+<td width="38">&nbsp;<%=@religion.first.X2%></td>
+<td width="38">&nbsp;<%=@religion.first.X3%></td>
+<td width="38">&nbsp;<%=@religion.first.X4%></td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="38">&nbsp;</td>
+<td width="83">&nbsp;<strong><%=@religion.first.XX%></strong></td>
+</tr>
+<tr>
+<td colspan="11">
+<p><strong>Promedio General Alumno(a)</strong> </p>
+</td>
+<td width="83">&nbsp;<strong><%=@total.round(1)%></strong></td>
+</tr>
+</tbody>
+</table>
+<table border="1" style="width:100px">
+<tbody>
+<tr>
+<td >
+<p><strong>TOTAL DíAS TRABAJADOS:</strong></p>
+</td>
+<td >&nbsp;86</td>
+</tr>
+<tr>
+<td >
+<p><strong>TOTAL DíAS ASISTENCIA (%):</strong></p>
+</td>
+<td >&nbsp;<%=(@alumno.asistencia1*100/86).round(1)%>%</td>
+</tr>
+<tr>
+<td >
+<p><strong>TOTAL DíAS INASISTENTES:</strong></p>
+</td>
+<td >&nbsp;<%=(86-@alumno.asistencia1).round%></td>
+</tr>
+</tbody>
+</table>
+<p>Observaciones:</p>
+<p>&nbsp;<%=@alumno.observacion%></p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<p>Luna Hinojosa Ceballos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; José Nazar Clavería</p>
+<p>Profesora Jefe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Director</p>

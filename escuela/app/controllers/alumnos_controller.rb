@@ -8,6 +8,7 @@ class AlumnosController < ApplicationController
   end
 
   def show
+     @alumno= Alumno.find(params[:id])  
   end
 
 	def todos
@@ -18,6 +19,7 @@ class AlumnosController < ApplicationController
     @alumno = Alumno.new
   end
   def edit
+    @alumno= Alumno.find(params[:id])
   end
 
   def create
@@ -29,7 +31,20 @@ class AlumnosController < ApplicationController
        render 'new'	
     end
   end
-
+  def update
+    @alumno = Alumno.find(params[:id])
+    if @alumno.update_attributes(alumno_params)
+      flash[:success] = "Alumno actualizado"
+      redirect_to alumnos_url   
+    else
+      render 'edit'
+    end
+  end
+  def destroy
+    Alumno.find(params[:id]).destroy
+    flash[:success] = "Alumno eliminado"
+    redirect_to alumnos_url
+  end  
 
 private
 
