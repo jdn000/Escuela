@@ -1,4 +1,4 @@
-<h1>Informes</h1>
+<h1>Informes<%=@alumnos.count%></h1>
  <table >
   <tbody>
   <tr> 
@@ -42,7 +42,7 @@
   </tr>
 
   <tr> 
-    <% @alumnos[35..38].each do |alumno| %>  
+    <% @alumnos[35..35].each do |alumno| %>  
    <td>  <div class="btn button azul"><%= link_to alumno.nombre+'-'+alumno.ap_pat , notas_descargar_path(:id=>alumno.id, format: :docx) %></div><% end %>
   </td>   
   </tr>
@@ -50,3 +50,5 @@
   </tbody>
 </table> 
 
+
+<div class="btn button rojo"><%= link_to "Un archivo" , notas_descargar3_path %></div>

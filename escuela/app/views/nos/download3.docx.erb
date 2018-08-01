@@ -1,3 +1,15 @@
+<%@alumnos.each do |alumno|%>
+ <%  @nos=No.where(" rut_al = ?  ",alumno.rut)    %> 
+ <%  @lenguaje=No.where("nom_asig = 'Lenguaje y comunicacion' AND rut_al = ? ",alumno.rut)  %>
+ <%  @ingles=No.where("nom_asig = 'Inglés' AND rut_al = ? ",alumno.rut) %>
+ <%  @matematica=No.where("nom_asig = 'Matemática' AND rut_al = ? ",alumno.rut)   %>
+ <%  @historia=No.where("nom_asig = 'Historia y geografía y ciencias sociales' AND rut_al = ? ",alumno.rut)   %>
+ <%  @ciencias=No.where("nom_asig = 'Ciencias naturales' AND rut_al = ? ",alumno.rut)   %>%>
+ <%  @artes=No.where("nom_asig = 'Artes visuales' AND rut_al = ? ",alumno.rut)   %>
+ <%  @musica=No.where("nom_asig = 'Música' AND rut_al = ? ",alumno.rut)   %>
+ <%  @edfisica=No.where("nom_asig = 'Educación física y salud' AND rut_al = ? ",alumno.rut) %>  
+ <%  @tecnologia=No.where("nom_asig = 'Tecnología' AND rut_al = ? ",alumno.rut)  %>
+ <%  @religion=No.where("nom_asig = 'Religión' AND rut_al = ? ",alumno.rut) @total=(@lenguaje.first.N16+@ingles.first.N16+@matematica.first.N16+@historia.first.N16+@ciencias.first.N16+@edfisica.first.N16+@tecnologia.first.N16+@musica.first.N16+@artes.first.N16)/9 %> 
 
 <p><img src="C:\Users\Jd\Desktop\image002.png" style="width:71px;height:86px" /><img src="C:\Users\Jd\Desktop\image001.png" style="width:323px;height:86px" /></p>
 <p style="padding-left: 120px; text-align: center;"><strong>INFORME DE NOTAS SEMESTRALES</strong></p>
@@ -10,10 +22,10 @@
 <tbody>
 <tr>
 <td colspan="9" >
-<p><strong>Alumno(a)</strong>  <%=@alumno.nombre.titleize%>  <%=@alumno.ap_pat.capitalize%>  <%=@alumno.ap_mat.capitalize%></p>
+<p><strong>Alumno(a)</strong>  <%=alumno.nombre.titleize%>  <%=alumno.ap_pat.capitalize%>  <%=alumno.ap_mat.capitalize%></p>
 </td>
 <td colspan="3" >
-<p><strong>Rut:</strong>  <%=@alumno.RUN%> </p>
+<p><strong>Rut:</strong>  <%=alumno.RUN%> </p>
 </td>
 </tr>
 <tr>
@@ -220,13 +232,13 @@
 <td >
 <p><strong>TOTAL DíAS ASISTENCIA (%):</strong></p>
 </td>
-<td >&nbsp;<%=(@alumno.asistencia1*100/86).round(1)%>%</td>
+<td >&nbsp;<%=(alumno.asistencia1*100/86).round(1)%>%</td>
 </tr>
 <tr>
 <td >
 <p><strong>TOTAL DíAS INASISTENTES:</strong></p>
 </td>
-<td >&nbsp;<%=(86-@alumno.asistencia1).round%></td>
+<td >&nbsp;<%=(86-alumno.asistencia1).round%></td>
 </tr>
 </tbody>
 </table>
@@ -234,7 +246,7 @@
 <p></p>
 <p></p>
 <p><strong>Observaciones:</strong></p>
-<p>&nbsp;<%=@alumno.observacion%></p>
+<p>&nbsp;<%=alumno.observacion%></p>
 <p>
 </p>
 <p>
@@ -255,3 +267,4 @@
 <p></p>
 <p>Luna Hinojosa Ceballos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; José Nazar Clavería</p>
 <p>Profesora Jefe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Director</p>
+<%end%>

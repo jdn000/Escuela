@@ -1,20 +1,25 @@
 class NosController < ApplicationController
   respond_to :docx
   respond_to :pdf
+  before_action :logged_in_user
 
-	# GET /alumnos
-  # GET /alumnos.json
-  $semestre
+
   def index
-  end
-
-  def index2
-    $semestre=params[:x]
   end
 
   def informes_index
    @alumnos=Alumno.all
   end
+  def download3
+   @alumnos=Alumno.all   
+   respond_to do |format|
+      format.docx do
+     render  docx: 'download3', filename: 'Informes_sexto_basico.docx'
+
+      end     
+    end
+  end  
+
  def download2
    @alumno=Alumno.find(params[:id])    
    @nos=No.where(" rut_al = ?  ",@alumno.rut)     
@@ -52,8 +57,8 @@ class NosController < ApplicationController
    @total=(@lenguaje.first.N16+@ingles.first.N16+@matematica.first.N16+@historia.first.N16+@ciencias.first.N16+@edfisica.first.N16+@tecnologia.first.N16+@musica.first.N16+@artes.first.N16)/9          
     respond_to do |format|
       format.docx do
-    #    render  docx: 'download', filename: @alumno.nombre.capitalize+'_'+@alumno.ap_pat.capitalize+@alumno.ap_mat.capitalize+'.docx'
-      redirect_to nos_url
+     render  docx: 'download', filename: @alumno.ap_pat.capitalize+'_'+@alumno.ap_mat.capitalize+'.docx'
+
       end     
     end
   end
@@ -73,22 +78,7 @@ class NosController < ApplicationController
    @total=(@lenguaje.first.N16+@ingles.first.N16+@matematica.first.N16+@historia.first.N16+@ciencias.first.N16+@edfisica.first.N16+@tecnologia.first.N16+@musica.first.N16+@artes.first.N16)/9        
   end
 
-  def index_por_alumno
-    @asignaturas =Asignatura.all
-    @alumnos=Alumno.where(" curso = ?", params[:cur])
-  end
 
-  def muestra_al
-    @ss=No.all
-    @alumno=Alumno.find(params[:alumno])
-    @nos=No.where(" rut_al = ? AND periodo = ? ",@alumno.rut,$semestre) 
-    if @nos.nil? == true
-      flash[:info] = "No existen notas asociadas" 
-      redirect_to nos_url
-    end
-   end
-
-  # GET /alumnos/new
   def new
   end
 
@@ -97,14 +87,7 @@ class NosController < ApplicationController
     @asignatura =Asignatura.find_by( nombre_asignatura: params[:asig])
   end  
 
-  def notas_alumnos
-    @alumno=Alumno.find(params[:id])
-    @asignatura=Asignatura.find(params[:ida])
-    @no=No.new
-    @no.rut_al = @alumno.rut
-    @no.nom_asig = @asignatura.nombre_asignatura
-    @no.periodo = $semestre 
-  end
+
 
   def create
     @no = No.new(no_params)
@@ -116,28 +99,16 @@ class NosController < ApplicationController
     end    
   end
 
-  def edit_nota_al
-   @alumno=Alumno.find(params[:alumno])
-   @asignatura=Asignatura.find(params[:asignatura])
-   @no=No.where(" rut_al = ? AND periodo = ? AND nom_asig = ?",@alumno.rut,$semestre,@asignatura.nombre_asignatura) 
-   if @no.nil?    
-     flash[:info] = "No existe nota "
-     $semestre=nil
-     redirect_to nos_new_url
-   end
-  end
   
   def edit
   end
 
 
-  # PATCH/PUT /alumnos/1
-  # PATCH/PUT /alumnos/1.json
+
   def update
   end
 
-  # DELETE /alumnos/1
-  # DELETE /alumnos/1.json
+
   def destroy
     @no.destroy
   end

@@ -1,5 +1,4 @@
 class AlumnosController < ApplicationController
-  before_action :set_alumno, only: [:show, :edit, :update, :destroy]	
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy,:new]
 
   def index
@@ -12,7 +11,7 @@ class AlumnosController < ApplicationController
   end
 
 	def todos
-    @alumnos = Alumno.all.paginate(page: params[:page])
+    @alumnos = Alumno.all
 
   end
   def new
@@ -48,9 +47,6 @@ class AlumnosController < ApplicationController
 
 private
 
-    def set_alumno
-      @alumno = Alumno.find(params[:id])
-    end
     def alumno_params
        params.require(:alumno).permit(:nombre, :ap_pat, :ap_mat, :rut, :curso)
     end

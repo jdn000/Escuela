@@ -11,8 +11,9 @@
 
   <%= f.label :Rut_sin_puntos_ni_guión %>
   <%= f.text_field :rut, class: 'form-control' %>
-
-  <%= f.select(:curso, [ '6','5','4','3','2','1' ], {}, { :class => 'select' }) %>
+   
+   <%=f.label :Curso%>
+  <%= f.select(:curso, [ '8','7','6','5','4','3','2','1' ], {}, { :class => 'select' }) %>
 
   <%= f.submit "Inscribir", class: "btn btn-primary" %>
 <% end %>

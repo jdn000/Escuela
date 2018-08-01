@@ -1,7 +1,0 @@
-<h1>Ingresar notas  <%= @asignatura.nombre_asignatura %></h1>
-    
-<% @alumnos.each do |alumno| %>  
-
-<div class="btn button rojo"><%= link_to alumno.nombre , notas_por_asignatura_path( :id=>alumno.id ,:ida=>@asignatura.id) %></div>
-
-<% end %> 

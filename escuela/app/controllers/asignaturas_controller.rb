@@ -1,5 +1,5 @@
 class AsignaturasController < ApplicationController
-
+  before_action :logged_in_user
   def index
     @asignaturas = Asignatura.all
   end

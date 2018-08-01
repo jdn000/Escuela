@@ -1,6 +1,6 @@
 class Asignatura < ApplicationRecord
  validates :nombre_asignatura,  presence: true, length: { maximum: 50 },uniqueness: true
- before_save :upcase_name
+ before_save :titleize
   has_many :nos
   has_many :alumnos, through: :nos
 
